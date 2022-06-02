@@ -5,10 +5,11 @@ const PostSchema = new mongoose.Schema({
     userId: { type: ObjectId, ref: 'User' },
     username: String,
     body: String,
-    // comments: [{
-    //     userId: { type: ObjectId, ref: 'User' },
-    //     comment: String
-    // }],
+    comments: [{
+        userId: { type: ObjectId, ref: 'User' },
+        username: { type: String, ref: 'User' },
+        comment: String
+    }],
 
 
 }, { timestamps: true });

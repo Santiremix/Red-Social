@@ -10,7 +10,7 @@ router.get('/id/:_id',PostController.getById)
 router.get('/name/:username', authentication, isAdmin, PostController.getPostsByName)
 router.delete('/:_id', authentication, isAdmin, PostController.delete)
 router.put('/:_id', authentication, isAdmin, PostController.update)
-router.put('/reviews/:_id', PostController.insertComment)
+router.put('/reviews/:_id',authentication, PostController.insertComment)
 
 
 module.exports = router; 

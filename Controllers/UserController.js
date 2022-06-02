@@ -58,7 +58,7 @@ const UserController = {
             if (user.tokens.length > 4) user.tokens.shift();
             user.tokens.push(token);
             await user.save();
-            res.send({ message: 'Bienvenid@ ' + user.name, token });
+            res.send({ message: 'Bienvenid@ ' + user.username, token });
         } catch (error) {
             console.error(error);
         }
