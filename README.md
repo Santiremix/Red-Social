@@ -12,10 +12,10 @@ Creamos el backend de una red social haciendo uso de JS, NodeJS y MongoDB princi
 ### Preview
 
 Organización Trello:
-![foto](./assets/trellofoto.JPG)
+![foto](./assets/trellofoto.jpg)
 
 Endpoints creados (Postman):
-![foto](./assets/postmanfoto.JPG)
+![foto](./assets/postmanfoto.jpg)
 
 ## Autor ✒️
 * **Santiago Guevara** - *The Bridge* - [santiremix](https://github.com/santiremix)
