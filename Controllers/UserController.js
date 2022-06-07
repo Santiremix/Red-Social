@@ -1,9 +1,9 @@
 const User = require("../models/User");
-const Post = require("../models/Post")
+// const Post = require("../models/Post")
 const bcrypt = require ('bcryptjs');
 const jwt = require('jsonwebtoken');
-const { jwt_secret } = require('../config/keys')
-const transporter = require("../config/nodemailer");
+const jwt_secret = process.env.JWT_SECRET
+// const transporter = require("../config/nodemailer");
 
 
 
