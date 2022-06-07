@@ -66,7 +66,7 @@ const UserController = {
 
     async getInfo(req, res) {
       try {
-        const user = await User.findById(req.user._id).lean().populate("postId", ["-createdAt", "-updatedAt", "-__v"])
+        const user = await User.findById(req.user._id).populate("postId", ["-createdAt", "-updatedAt", "-__v"])
         res.send(user);
       } catch (error) {
         console.error(error);
