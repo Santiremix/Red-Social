@@ -1,7 +1,9 @@
 # Proyecto Backend
-Creamos el backend de una red social haciendo uso de JS, NodeJS y MongoDB principalmente. 
+
+Creamos el backend de una red social haciendo uso de JS, NodeJS y MongoDB principalmente.
 
 ## HERRAMIENTAS 🛠️
+
 - JavaScript
 - NodeJS
 - MongoDB
@@ -15,7 +17,8 @@ Organización Trello:
 ![foto](./assets/trellofoto.JPG)
 
 Endpoints creados (Postman):
-![foto](./assets/postmanfoto.jpg)
+![foto](./assets/postmanfoto.JPG)
 
 ## Autor ✒️
-* **Santiago Guevara** - *The Bridge* - [santiremix](https://github.com/santiremix)
+
+- **Santiago Guevara** - _The Bridge_ - [santiremix](https://github.com/santiremix)
