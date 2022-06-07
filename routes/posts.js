@@ -6,11 +6,14 @@ const { authentication, isAdmin } = require("../middlewares/authentication");
 
 router.post('/', authentication, PostController.create)
 router.get('/', PostController.getAll)
-router.get('/id/:_id',PostController.getById)
-router.get('/name/:username', authentication, isAdmin, PostController.getPostsByName)
-router.delete('/:_id', authentication, isAdmin, PostController.delete)
-router.put('/:_id', authentication, isAdmin, PostController.update)
-router.put('/reviews/:_id',authentication, PostController.insertComment)
+router.get('/id/:_id', PostController.getById)
+router.get('/name/:username', PostController.getPostsByName)
+router.delete('/:_id', PostController.delete)
+router.put('/:_id', PostController.update)
+router.put('/like/:_id', authentication, PostController.like)
+router.put('/dislike/:_id', authentication, PostController.dislike)
+
+
 
 
 module.exports = router; 

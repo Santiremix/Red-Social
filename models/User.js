@@ -9,7 +9,8 @@ const UserSchema = new mongoose.Schema({
     role: String,
     confirmed: Boolean,
     tokens: [],
-    postIds: [{ type: ObjectId, ref: 'Post' }],
+    postId: [{ type: ObjectId, ref: 'Post' }],
+
 }, { timestamps: true });
 
 UserSchema.methods.toJSON = function() {
@@ -17,9 +18,9 @@ UserSchema.methods.toJSON = function() {
     delete user.tokens;
     delete user.password;
     delete user.createdAt;
+    delete user.updatedAt;
     return user;
 }
-
 
 const User = mongoose.model('User', UserSchema);
 
