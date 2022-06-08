@@ -32,6 +32,16 @@ const CommentController ={
         }
     },
 
+    async update(req, res) {
+      try {
+          const comment = await Comment.findByIdAndUpdate(req.params._id, {...req.body, username:req.user.username, userId: req.user._id, postId: req.params._id }, { new: true })
+          res.status(201).send({ message: `Comentario modificado con éxito`, comment });
+     
+        } catch (error) {
+          res.status(201).send({ message: 'Error al actualizar el comentario' })
+      }
+  },
+
 }
 
 module.exports = CommentController;
