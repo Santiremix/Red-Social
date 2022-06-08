@@ -8,7 +8,8 @@ router.post('/', UserController.register)
 router.get('/confirm/:emailToken', UserController.confirm);
 router.post('/login', UserController.login)
 router.delete('/logout', authentication, UserController.logout)
-router.delete('/deleteUser/:id', authentication,isAdmin, UserController.deleteUserByAdmin)
+router.delete('/deleteMyself', authentication, UserController.deleteMyself)
+router.delete('/deleteUser/:id', authentication, isAdmin, UserController.deleteUserByAdmin)
 
 router.get('/info', authentication, UserController.getInfo)
 

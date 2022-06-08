@@ -99,6 +99,17 @@ const UserController = {
           res.status(500).send({ message: 'Problema para borrar el user admin' })
       }
   },
+
+  async deleteMyself(req, res) {
+    try {
+        const user = await User.findByIdAndDelete(req.user._id)
+        await Post.deleteMany({ userId: req.user._id })
+        await Comment.deleteMany({ userId: req.user._id })
+        res.status(200).send({ message: `Has eliminado tu usuario con éxito. Vuelve pronto!`, user })
+    } catch (error) {
+        res.status(500).send({ message: 'Ha surgido un problema al intentar borrar tu usuario.' })
+    }
+  }
   
     
 }
