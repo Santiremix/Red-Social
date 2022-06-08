@@ -16,7 +16,7 @@ Creamos el backend de una red social haciendo uso de JS, NodeJS y MongoDB princi
 Organización Trello:
 ![foto](./assets/trellofoto.JPG)
 
-Endpoints creados (Postman):
+Endpoints creados (Postman):<br>
 ![foto](./assets/postmanfoto.JPG)
 
 ## Autor ✒️
