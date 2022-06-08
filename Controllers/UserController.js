@@ -87,6 +87,18 @@ const UserController = {
         });
       }
     },
+
+    async deleteUserByAdmin(req, res) {
+      try {
+          const user = await User.findByIdAndDelete(req.params._id)
+          await Post.deleteMany({ userId: req.params._id })
+          await Comment.deleteMany({ userId: req.params._id })
+          res.status(200).send({ message: `Usuario con id ${req.params._id} ha sido borrado`, user })
+      } catch (error) {
+          console.log(colors.red.bgWhite(error))
+          res.status(500).send({ message: 'Problema para borrar el user admin' })
+      }
+  },
   
     
 }
