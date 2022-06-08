@@ -25,7 +25,6 @@ const CommentController ={
       async deleteComment(req, res) {
         try {
             const comment = await Comment.findByIdAndDelete(req.params._id)
-            console.log(comment)
             res.send({ msg: 'Comentario eliminado con éxito.' })
         } catch (error) {
             console.error(error)
