@@ -1,9 +1,9 @@
 const User = require("../models/User");
-const Post = require("../models/Post")
+// const Post = require("../models/Post")
 const bcrypt = require ('bcryptjs');
 const jwt = require('jsonwebtoken');
-const { jwt_secret } = require('../config/keys')
-const transporter = require("../config/nodemailer");
+const jwt_secret = process.env.JWT_SECRET
+// const transporter = require("../config/nodemailer");
 
 
 
@@ -34,6 +34,7 @@ const UserController = {
             res.status(500).send({ message: 'Ha habido un problema al registrarte' })
         }
     },
+
     async confirm(req,res){
         try {
           const token = req.params.emailToken
@@ -82,7 +83,7 @@ const UserController = {
       } catch (error) {
         console.error(error);
         res.status(500).send({
-          message: "Hubo un problema al intentar conectar al usuario",
+          message: "Ha habido un problema al conectar al usuario",
         });
       }
     },
